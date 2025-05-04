@@ -23,7 +23,7 @@ public class BaseClass {
     protected GoogleDriveAdapter googleDriveAdapter;
     protected DriveFactory driveFactory = new DriveFactory();
 
-    protected static void beforeClass() {
+    protected static void beforeClass() { 
         App.initLogging();
     }
 
@@ -33,7 +33,7 @@ public class BaseClass {
         googleDriveAdapter.deleteAll();
         assertThat(googleDriveAdapter.listAll().size(), is(0));
     }
-
+// jajaj
     protected Options createOptions(String testDirName) {
         Options options = new Options();
         options.setAuthenticationFile(Optional.of(Paths.get(System.getProperty("user.dir"), "src", "test", "resources", ".jdrivesync").toString()));
